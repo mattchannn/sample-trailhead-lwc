@@ -24,6 +24,8 @@ A collection of easy-to-digest code examples for Lightning Web Components. Each 
 
 -   [Installing the app using a Developer Edition Org or a Trailhead Playground](#installing-the-app-using-a-developer-edition-org-or-a-trailhead-playground): Useful when tackling Trailhead Badges or if you want the app deployed to a more permanent environment than a Scratch org.
 
+- [Install the LWC Local Development Server](#install-the-lwc-local-development-server)
+
 -   [Optional installation instructions](#optional-installation-instructions)
 
 -   [Code tours](#code-tours)
@@ -163,6 +165,17 @@ Make sure to start from a brand-new environment to avoid conflicts with previous
 1. In **Setup**, under **Themes and Branding**, activate the **Recipes Lite** or **Recipes Blue** theme.
 
 1. In App Launcher, select the **LWC** app.
+
+## [Install the LWC Local Development Server](https://developer.salesforce.com/tools/vscode/en/localdev/set-up-lwc-local-dev)
+
+`sfdx plugins:install @salesforce/lwc-dev-server`
+
+If you encounter any issue about `node-gyp not found!`. Please try to below steps:
+- Install node gyp by running `npm install -g node-gyp`
+- Run `npm install --global --production windows-build-tools`
+
+After you select SFDX: Preview Component Locally, the Command Palette displays a list of preview options. You can choose to preview your component in the desktop browser or in a virtual mobile device (iOS or Android)
+
 
 ## Optional Installation Instructions
 

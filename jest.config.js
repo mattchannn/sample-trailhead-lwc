@@ -15,7 +15,9 @@ module.exports = {
         '^lightning/messageService$':
             '<rootDir>/force-app/test/jest-mocks/lightning/messageService',
         '^lightning/actions$':
-            '<rootDir>/force-app/test/jest-mocks/lightning/actions'
+            '<rootDir>/force-app/test/jest-mocks/lightning/actions',
+        '^lightning/button$':
+            '<rootDir>/force-app/test/jest-mocks/lightning/button'
     },
     setupFiles: ['jest-canvas-mock'],
     setupFilesAfterEnv,

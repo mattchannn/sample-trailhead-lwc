@@ -1,0 +1,4 @@
+.custom-checkbox {
+    padding-top: var(--sds-c-card-header-spacing-block-start, var(--sds-c-card-header-spacing-block, var(--lwc-varSpacingVerticalSmall,0.75rem)));
+    padding-left: var(--sds-c-card-header-spacing-inline-start, var(--sds-c-card-header-spacing-inline, var(--lwc-varSpacingHorizontalMedium,1rem)));
+}

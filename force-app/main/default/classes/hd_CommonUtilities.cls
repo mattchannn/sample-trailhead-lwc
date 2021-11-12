@@ -4,8 +4,10 @@
 
 public with sharing class hd_CommonUtilities {
 
-  public static String phoneNumber = '96347641';
-  public static String billingAddress = '2100 Woodward Ave';
+  public static String phoneNumber = '(852) 9634-7641';
+  public static String billingState = 'NY';
+  public static String billingPostalCode = '051';
+  public static String billingStreet = '2100 Woodward Ave';
   public static String accountType = 'Technology Partner';
 
   // TO-DO
@@ -33,7 +35,9 @@ public with sharing class hd_CommonUtilities {
     }
 
     try {
-      acct.BillingAddress = billingAddress;
+      acct.BillingState = billingState;
+      acct.BillingStreet = billingStreet;
+      acct.BillingPostalCode = billingPostalCode;
       acct.Phone = phoneNumber;
       acct.Type = accountType;
       insert acct;

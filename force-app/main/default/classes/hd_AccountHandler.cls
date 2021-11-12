@@ -31,7 +31,7 @@ global with sharing class hd_AccountHandler implements vlocity_ins.VlocityOpenIn
     }
 
     @AuraEnabled(cacheable=true)
-    public static Account getSingleAccount() {
+    public static Account getSingleAccountByAccountId() {
         return [
             SELECT Id, Name, Phone, Type
             FROM Account
@@ -40,29 +40,24 @@ global with sharing class hd_AccountHandler implements vlocity_ins.VlocityOpenIn
         ];
     }
 
-    public static Account saveAccount(Map<String,Object> inputMap, Map<String,Object> outputMap, Map<String, Object> options) {
+    public static void saveAccount(Map<String,Object> inputMap, Map<String,Object> outputMap, Map<String, Object> options) {
         system.debug('>> saveAccount starts');
         Account acct = new Account();
 
         
         String accountName = (String) inputMap.get('accountName');
         String website = (String) inputMap.get('website');
-        Object delimiterColon = (Object) inputMap.get('delimiterColon');
         acct.Name = accountName;
-        acct.website = website;
+        acct.Website = website;
 
         system.debug('>> Before saving account detail');
         system.debug('>> accountName = ' + accountName + ', website = ' + website);
-        system.debug('>> delimiterColon = ' + delimiterColon);
         system.debug('>> options: ' + options);
-
-        if (acct == null) {
-            return acct;
-        }
         
+        hd_CommonUtilities.insertAccount(acct);
         system.debug('>> saveAccount ends');
+
         outputMap.put('accountCreationResult', acct);
-        return acct;
-        // insert acct;
+        
     }
 }

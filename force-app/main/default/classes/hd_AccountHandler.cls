@@ -2,9 +2,9 @@
  * @author Mat CHAN
  */
 
-public with sharing class AccountHandler implements vlocity_ins.VlocityOpenInterface {
+global with sharing class hd_AccountHandler implements vlocity_ins.VlocityOpenInterface {
 
-    public Boolean invokeMethod(String methodName, Map<String, Object> inputMap, Map<String, Object> outputMap, Map<String, Object> options) {
+  global Boolean invokeMethod(String methodName, Map<String, Object> inputMap, Map<String, Object> outputMap, Map<String, Object> options) {
         Boolean result = true;
         String errors = 'OK';
         System.debug('>> invokeMethod');
@@ -47,11 +47,13 @@ public with sharing class AccountHandler implements vlocity_ins.VlocityOpenInter
         
         String accountName = (String) inputMap.get('accountName');
         String website = (String) inputMap.get('website');
+        Object delimiterColon = (Object) inputMap.get('delimiterColon');
         acct.Name = accountName;
         acct.website = website;
 
         system.debug('>> Before saving account detail');
         system.debug('>> accountName = ' + accountName + ', website = ' + website);
+        system.debug('>> delimiterColon = ' + delimiterColon);
         system.debug('>> options: ' + options);
 
         if (acct == null) {

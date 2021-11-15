@@ -1,12 +1,12 @@
 .quantity-group {
-    padding: 0.85rem;
+    padding: 0.5rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
     width: fit-content;
     align-items: center;
     border: 1px solid #DDDBDA;
     border-radius: 4px;
 }
-
-/* slds-container flex: 0 1 auto */ 
 
 .quantity-group .slds-icon_container {
     cursor: pointer;

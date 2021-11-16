@@ -1,24 +1,32 @@
 <template>
     <div class="quantity__master-container slds-grid">
-        <div class="slds-col quantity__decrement-btn">
+        <div class="slds-col slds-grid quantity__decrement-btn">
             <lightning-icon
                 icon-name="utility:ban"
                 alternative-text="Decrement"
                 title="decrement"
                 size="xx-small"
+                onclick={decrement}
             >
             </lightning-icon>
         </div>
         <div class="slds-col quantity__text-field">
             <!-- <span>1</span> -->
-            <input type="text" value="0" />
+            <input
+                data-id="quantity-field"
+                id="quantity-field-47"
+                type="text"
+                value={number}
+                onchange={onQuantityChange}
+            />
         </div>
-        <div class="slds-col quantity__increment-btn">
+        <div class="slds-col slds-grid quantity__increment-btn">
             <lightning-icon
                 icon-name="utility:new"
                 alternative-text="Increment"
                 title="increment"
                 size="xx-small"
+                onclick={increment}
             >
             </lightning-icon>
         </div>

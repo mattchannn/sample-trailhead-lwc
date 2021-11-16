@@ -1,7 +1,13 @@
+/* Use styling hook to override the standard lightning web component*/
+:host .quantity__input {
+    --sds-c-input-shadow-focus: none;
+    --lwc-borderWidthThin: 0;
+    --lwc-spacingMedium: 0;
+    --lwc-spacingSmall: 0;
+    --lwc-heightInput: 1rem;
+}
+
 .quantity__master-container {
-    padding: 8px;
-    padding-top: 10px;
-    padding-bottom: 12px;
     width: fit-content;
     align-items: center;
     border: 1px solid #dddbda;
@@ -12,10 +18,17 @@
     cursor: pointer;
 }
 
-.quantity__text-field {
+.quantity__master-container .quantity__text-field {
     width: 23px;
+    /* TODO: try to fix the styling with a better way */
+    padding-left: 6px;
+}
+
+/*
+.quantity__input input {
+    padding: 0;
     text-align: center;
-    margin: 0 8px;
+    border: 0;
 }
 
 .quantity__master-container input {
@@ -25,3 +38,4 @@
     width: 100%;
     text-align: center;
 }
+*/

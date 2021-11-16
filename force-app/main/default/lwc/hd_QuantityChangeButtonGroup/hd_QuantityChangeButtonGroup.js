@@ -6,12 +6,9 @@ import externalStyle from '@salesforce/resourceUrl/hd_QuantityChangeButtonGroupA
 export default class hd_QuantityfChangeButtonGroup extends LightningElement {
     number = 0;
 
-    renderedCallback() {
+    connectedCallback() {
         console.log('>> hd_QuantityChangeButtonGroup rendered..');
-        loadStyle(
-            this,
-            externalStyle + '/hd_QuantityChangeButtonGroupAlignInput.css'
-        )
+        loadStyle(this, externalStyle)
             .then(() => {
                 console.log(
                     'hd_QuantityChangeButtonGroupAlignInput external css file loaded'

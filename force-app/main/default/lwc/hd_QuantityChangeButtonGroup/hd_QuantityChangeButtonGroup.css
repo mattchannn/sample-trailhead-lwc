@@ -1,19 +1,27 @@
-.quantity-group {
-    padding: 0.5rem;
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
+.quantity__master-container {
+    padding: 8px;
+    padding-top: 10px;
+    padding-bottom: 12px;
     width: fit-content;
     align-items: center;
-    border: 1px solid #DDDBDA;
+    border: 1px solid #dddbda;
     border-radius: 4px;
 }
 
-.quantity-group .slds-icon_container {
+.quantity__master-container .slds-icon_container {
     cursor: pointer;
 }
 
-.quantity-group input {
+.quantity__text-field {
+    width: 23px;
+    text-align: center;
+    margin: 0 8px;
+}
+
+.quantity__master-container input {
     background: transparent;
     outline: none;
     border: none;
+    width: 100%;
+    text-align: center;
 }

@@ -19,23 +19,9 @@
 }
 
 .quantity__master-container .quantity__text-field {
-    width: 23px;
+    width: 30px;
     /* TODO: try to fix the styling with a better way */
-    padding-left: 6px;
+    /* This is to center the input inside a div */
+    /* However, we can't customize the sldc-input class directly */
+    padding-left: 10px;
 }
-
-/*
-.quantity__input input {
-    padding: 0;
-    text-align: center;
-    border: 0;
-}
-
-.quantity__master-container input {
-    background: transparent;
-    outline: none;
-    border: none;
-    width: 100%;
-    text-align: center;
-}
-*/

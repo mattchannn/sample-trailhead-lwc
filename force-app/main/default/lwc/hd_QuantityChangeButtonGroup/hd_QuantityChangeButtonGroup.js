@@ -9,19 +9,29 @@ export default class hd_QuantityfChangeButtonGroup extends LightningElement {
     async connectedCallback() {
         console.log('>> hd_QuantityChangeButtonGroup, connectedCallback, the component is populated to the DOM..');
         await this.loadGlobalStyle();
+        console.log('>> hd_QuantityChangeButtonGroup, showToast now');
+        // this.dispatchEvent(this.errorToastEvent);
     }
+
+    errorToastEvent = new ShowToastEvent({
+        title: 'Get Help',
+        variant: 'error',
+        message: 'Salesforce documentation is available in the app. Click ? in the upper-right corner.',
+        mode: 'sticky'
+    });
 
     async loadGlobalStyle() {
         try {
-            await loadStyle(this, externalComponentStyle);
+            await loadStyle(this, externalComponentStyle + '1.css');
             console.log('hd_QuantityChangeButtonGroupAlignInput external css file loaded');
         } catch (err) {
-            console.error(err);
+            console.error('Load global style error, error message: ', err ? err.message : '');
             this.dispatchEvent(
                 new ShowToastEvent({
                     title: 'Error loading hd_QuantityChangeButtonGroupAlignInput',
-                    message: err.message,
-                    variant: 'error'
+                    message: err ? err.message : 'Load hd_QuantityChangeButtonGroupAlignInput global style error',
+                    variant: 'error',
+                    mode: 'sticky'
                 })
             );
         }

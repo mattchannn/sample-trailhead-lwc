@@ -22,7 +22,7 @@ export default class hd_QuantityfChangeButtonGroup extends LightningElement {
 
     async loadGlobalStyle() {
         try {
-            await loadStyle(this, externalComponentStyle + '1.css');
+            await loadStyle(this, externalComponentStyle);
             console.log('hd_QuantityChangeButtonGroupAlignInput external css file loaded');
         } catch (err) {
             console.error('Load global style error, error message: ', err ? err.message : '');

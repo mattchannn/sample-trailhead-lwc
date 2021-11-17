@@ -1,3 +1,14 @@
+/* Use styling hook to override the standard lightning web component*/
+:host .quantity__input {
+    /*
+    --sds-c-input-shadow-focus: none;
+    --lwc-borderWidthThin: 0;
+    --lwc-spacingMedium: 0;
+    --lwc-spacingSmall: 0;
+    --lwc-heightInput: 1rem;
+    */
+}
+
 .quantity__master-container {
     width: fit-content;
     align-items: center;

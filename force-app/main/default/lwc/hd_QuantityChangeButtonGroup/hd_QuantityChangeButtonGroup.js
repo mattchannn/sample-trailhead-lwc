@@ -23,9 +23,12 @@ export default class hd_QuantityfChangeButtonGroup extends LightningElement {
     async loadGlobalStyle() {
         try {
             await loadStyle(this, externalComponentStyle);
-            console.log('hd_QuantityChangeButtonGroupAlignInput external css file loaded');
+            console.log('>> hd_QuantityChangeButtonGroup, align input external css file loaded');
         } catch (err) {
-            console.error('Load global style error, error message: ', err ? err.message : '');
+            console.error(
+                '>> hd_QuantityChangeButtonGroup, Load global style error, err message: ',
+                err ? err.message : ''
+            );
             this.dispatchEvent(
                 new ShowToastEvent({
                     title: 'Error loading hd_QuantityChangeButtonGroupAlignInput',
@@ -46,11 +49,22 @@ export default class hd_QuantityfChangeButtonGroup extends LightningElement {
             this.number -= 1;
         }
     }
+
     decimalCheck(event) {
+        // For onPaste event
+        const clipBoardDataEvent = event.clipboardData || window.clipboardData;
+        if (clipBoardDataEvent && isNaN(clipBoardDataEvent.getData('text'))) {
+            // console.log('>> hd_QuantityChangeButtonGroup, decimalCheck, clipboard data is', clipBoardDataEvent.getData('text'));
+            event.preventDefault();
+        }
+
+        // For onKeyDown event
+        // console.log('>> hd_QuantityChangeButtonGroup, decimalCheck, event.key is', event.key);
         if (event.key === '.' || event.key === 'e' || event.key === 'E') {
             event.preventDefault();
         }
     }
+
     onQuantityChange(event) {
         if (!isNaN(event.target.value)) {
             // this.number = parseInt(event.target.value);

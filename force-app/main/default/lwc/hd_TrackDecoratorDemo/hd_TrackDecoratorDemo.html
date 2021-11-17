@@ -1,14 +1,24 @@
 <template>
     <lightning-card title="Major LWC Area for Track Decorator">
         <lightning-button label="Toggle" slot="actions" onclick={handleClick}></lightning-button>
-        <p class="slds-p-horizontal_medium">First name: {fullName.firstName}</p>
-        <p class="slds-p-horizontal_medium">Middle name: {fullName.middleName}</p>
-        <p class="slds-p-horizontal_medium">Last name: {fullName.lastName}</p>
+        <p class="slds-var-p-horizontal_medium">First name: {fullName.firstName}</p>
+        <p class="slds-var-p-horizontal_medium">Middle name: {fullName.middleName}</p>
+        <p class="slds-var-p-horizontal_medium">Last name: {fullName.lastName}</p>
     </lightning-card>
     <lightning-card title="Custom LWC Area">
-        <c-hd_-quantity-change-button-group class="slds-p-horizontal_medium"></c-hd_-quantity-change-button-group>
-        <c-hd_-quantity-change-button-group-clone
-            class="slds-p-horizontal_medium"
-        ></c-hd_-quantity-change-button-group-clone>
+        <div class="trackdec__flexbox">
+            <c-hd_-quantity-change-button-group class="slds-var-p-horizontal_medium">
+            </c-hd_-quantity-change-button-group>
+            <lightning-button
+                variant="brand"
+                label="Go To Order Detail"
+                title="Navigate to order detail page"
+                icon-name="action:check"
+                class="slds-m-left_x-small"
+            ></lightning-button>
+        </div>
+        <p class="slds-var-p-horizontal_medium">Below is the clone of a reusable component</p>
+        <c-hd_-quantity-change-button-group-clone class="slds-var-p-horizontal_medium">
+        </c-hd_-quantity-change-button-group-clone>
     </lightning-card>
 </template>

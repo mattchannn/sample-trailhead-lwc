@@ -7,7 +7,7 @@ export default class hd_QuantityfChangeButtonGroupClone extends LightningElement
     number = 0;
 
     async connectedCallback() {
-        console.log('>> hd_QuantityChangeButtonGroup, connectedCallback, the component is populated to the DOM..');
+        console.log('>> hd_QuantityChangeButtonGroupClone, connectedCallback, the component is populated to the DOM..');
         // await this.loadGlobalStyle();
     }
 

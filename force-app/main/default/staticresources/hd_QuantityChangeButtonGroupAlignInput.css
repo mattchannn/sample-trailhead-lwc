@@ -2,5 +2,6 @@
     padding: var(--lwc-spacingNone);
     text-align: center;
     line-height: var(--lwc-heightInput,1rem);
-    border: var(--lwc-borderWidthThin, 0px) solid var(--sds-c-input-color-border, var(--lwc-colorBorderInput,rgb(221, 219, 218)));
+    border: var(--lwc-spacingNone) solid var(--sds-c-input-color-border, var(--lwc-colorBorderInput,rgb(221, 219, 218)));
+    /* border: 0; */
 }

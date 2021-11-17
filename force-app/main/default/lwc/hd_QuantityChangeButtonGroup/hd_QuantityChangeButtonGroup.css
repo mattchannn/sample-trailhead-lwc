@@ -12,8 +12,8 @@
 .quantity__master-container {
     width: fit-content;
     align-items: center;
-    border: 1px solid #dddbda;
-    border-radius: 4px;
+    border: var(--lwc-borderWidthThin, 1px) solid var(--lwc-colorBorder, #dddbda);
+    border-radius: var(--lwc-borderRadiusMedium, 0.25rem);
 }
 
 .quantity__master-container .slds-icon_container {

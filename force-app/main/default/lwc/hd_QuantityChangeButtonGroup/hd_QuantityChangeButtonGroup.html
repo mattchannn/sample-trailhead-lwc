@@ -6,15 +6,10 @@
             slds-var-p-around_x-small
             slds-var-p-left_small
             slds-var-p-right_small
+            slds-var-m-horizontal_medium
         "
     >
-        <div
-            class="
-                slds-col slds-grid
-                quantity__decrement-btn
-                slds-var-m-right_small
-            "
-        >
+        <div class="slds-col slds-grid quantity__decrement-btn slds-var-m-right_small">
             <lightning-icon
                 icon-name="utility:ban"
                 alternative-text="Decrement"
@@ -25,8 +20,6 @@
             </lightning-icon>
         </div>
         <div class="slds-col quantity__text-field">
-            <!-- <input data-id="quantity-field" id="quantity-field-47" type="text" value={number}
-                onchange={onQuantityChange} pattern="[0-9]+"> -->
             <lightning-input
                 class="quantity__input"
                 data-id="quantity-input"
@@ -41,13 +34,7 @@
             >
             </lightning-input>
         </div>
-        <div
-            class="
-                slds-col slds-grid
-                quantity__increment-btn
-                slds-var-m-left_small
-            "
-        >
+        <div class="slds-col slds-grid quantity__increment-btn slds-var-m-left_small">
             <lightning-icon
                 icon-name="utility:new"
                 alternative-text="Increment"

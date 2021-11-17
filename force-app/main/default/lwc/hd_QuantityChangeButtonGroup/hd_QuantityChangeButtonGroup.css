@@ -1,10 +1,12 @@
 /* Use styling hook to override the standard lightning web component*/
 :host .quantity__input {
+    /*
     --sds-c-input-shadow-focus: none;
     --lwc-borderWidthThin: 0;
     --lwc-spacingMedium: 0;
     --lwc-spacingSmall: 0;
     --lwc-heightInput: 1rem;
+    */
 }
 
 .quantity__master-container {
@@ -20,8 +22,4 @@
 
 .quantity__master-container .quantity__text-field {
     width: 30px;
-    /* TODO: try to fix the styling with a better way */
-    /* This is to center the input inside a div */
-    /* However, we can't customize the sldc-input class directly */
-    padding-left: 10px;
 }

@@ -1,22 +1,20 @@
 import { LightningElement } from 'lwc';
 import { loadStyle } from 'lightning/platformResourceLoader';
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
-import componentStyle from '@salesforce/resourceUrl/hd_QuantityChangeButtonGroupAlignInput';
+import externalComponentStyle from '@salesforce/resourceUrl/hd_QuantityChangeButtonGroupAlignInput';
 
 export default class hd_QuantityfChangeButtonGroup extends LightningElement {
     number = 0;
 
     async connectedCallback() {
-        console.log('>> hd_QuantityChangeButtonGroup rendered..');
-        this.loadGlobalStyle();
+        console.log('>> hd_QuantityChangeButtonGroup, connectedCallback, the component is populated to the DOM..');
+        await this.loadGlobalStyle();
     }
 
     async loadGlobalStyle() {
         try {
-            await loadStyle(this, componentStyle);
-            console.log(
-                'hd_QuantityChangeButtonGroupAlignInput external css file loaded'
-            );
+            await loadStyle(this, externalComponentStyle);
+            console.log('hd_QuantityChangeButtonGroupAlignInput external css file loaded');
         } catch (err) {
             console.error(err);
             this.dispatchEvent(

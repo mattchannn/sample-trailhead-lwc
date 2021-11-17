@@ -1,19 +1,13 @@
 <template>
     <lightning-card title="Track Decorator Demo">
-        <lightning-button
-            label="Toggle"
-            slot="actions"
-            onclick={handleClick}
-        ></lightning-button>
+        <lightning-button label="Toggle" slot="actions" onclick={handleClick}></lightning-button>
         <p class="slds-p-horizontal_medium">First name: {fullName.firstName}</p>
-        <p class="slds-p-horizontal_medium">
-            Middle name: {fullName.middleName}
-        </p>
+        <p class="slds-p-horizontal_medium">Middle name: {fullName.middleName}</p>
         <p class="slds-p-horizontal_medium">Last name: {fullName.lastName}</p>
     </lightning-card>
     <lightning-card title="Quantity change controller">
-        <c-hd_-quantity-change-button-group
-            class="slds-p-horizontal_medium"
-        ></c-hd_-quantity-change-button-group>
+        <div class="slds-p-horizontal_medium">
+            <c-hd_-quantity-change-button-group class="slds-p-horizontal_medium"></c-hd_-quantity-change-button-group>
+        </div>
     </lightning-card>
 </template>

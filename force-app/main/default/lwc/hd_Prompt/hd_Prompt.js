@@ -3,12 +3,17 @@ import { LightningElement, api } from 'lwc';
 export default class hd_Prompt extends LightningElement {
     @api mode;
     @api title;
+    @api descriptionText;
 
     headerBaseTheme = 'slds-modal__header slds-theme_alert-texture';
     headerTheme;
 
     connectedCallback() {
         this.setHeaderTheme();
+    }
+
+    promptButtonClickHandler() {
+        this.dispatchEvent(new CustomEvent('promptbuttonclick'));
     }
 
     setHeaderTheme() {
@@ -20,7 +25,7 @@ export default class hd_Prompt extends LightningElement {
                 this.headerTheme = this.headerBaseTheme + ' slds-theme_warning';
                 break;
             default:
-                console.log('Default');
+                this.headerTheme = this.headerBaseTheme + ' slds-theme_error';
         }
     }
 }

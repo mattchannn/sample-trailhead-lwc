@@ -3,6 +3,7 @@ import { NavigationMixin } from 'lightning/navigation';
 
 export default class hd_TrackDecoratorDemo extends NavigationMixin(LightningElement) {
     @track fullName = { firstName: '', lastName: '' };
+    isShowPrompt = false;
 
     renderedCallback() {
         console.log('>> hd_TrackDecoratorDemo: <renderedCallback()>: render now');
@@ -17,6 +18,16 @@ export default class hd_TrackDecoratorDemo extends NavigationMixin(LightningElem
                 actionName: 'list'
             }
         });
+    }
+
+    showPrompt() {
+        console.log('>> hd_TrackDecoratorDemo: showPrompt');
+        this.isShowPrompt = true;
+    }
+
+    onPromptButtonClickHandler() {
+        console.log('>> hd_TrackDecoratorDemo: onPromptButtonClickHandler');
+        this.isShowPrompt = false;
     }
 
     handleClick() {

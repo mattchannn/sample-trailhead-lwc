@@ -17,6 +17,15 @@
                 onclick={navigateToOrderDetailPage}
             >
             </lightning-button>
+            <lightning-button
+                variant="brand"
+                label="Display Warning Prompt"
+                title="Display a Warning Prompt"
+                icon-name="action:check"
+                class="slds-var-m-left_x-small"
+                onclick={showPrompt}
+            >
+            </lightning-button>
         </div>
         <p class="slds-var-p-horizontal_medium slds-var-m-top_medium">Below is the clone of a reusable component</p>
         <div class="trackdec__flexbox-clone">
@@ -25,5 +34,12 @@
         </div>
     </lightning-card>
     <!-- Prompt -->
-    <c-hd_-prompt mode="warning" title="Warning"></c-hd_-prompt>
+    <template if:true={isShowPrompt}>
+        <c-hd_-prompt
+            mode="warning"
+            title="Warning"
+            description-text="Are you sure you want to cancel the order?"
+            onpromptbuttonclick={onPromptButtonClickHandler}
+        ></c-hd_-prompt>
+    </template>
 </template>

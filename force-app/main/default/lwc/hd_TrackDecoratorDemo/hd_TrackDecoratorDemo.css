@@ -3,6 +3,10 @@
     align-items: center;
 }
 
+.trackdec__flexbox-clone {
+    display: flex;
+}
+
 .trackdec__spinner-demo-section {
-    padding: var(--lwc-varSpacingLarge, 1.5rem);
+    padding: var(--lwc-varSpacingMedium, 1rem);
 }

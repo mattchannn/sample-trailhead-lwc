@@ -1,2 +1,13 @@
-.THIS {
+.spinner-demo__master-container {
+    position: relative;
+    padding: var(--lwc-varSpacingMedium, 1rem);
+}
+
+.spinner-demo__toggle-btn-container,
+.spinner-demo__section-header {
+    display: flex;
+}
+
+.spinner-demo__section-header {
+    align-items: center;
 }

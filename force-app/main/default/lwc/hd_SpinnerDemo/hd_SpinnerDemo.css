@@ -9,5 +9,7 @@
 }
 
 .spinner-demo__section-header {
+    position: relative;
+    min-height: 4rem;
     align-items: center;
 }

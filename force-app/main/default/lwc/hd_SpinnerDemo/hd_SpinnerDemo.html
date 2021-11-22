@@ -16,10 +16,10 @@
             ></lightning-button>
         </div>
         <div class="spinner-demo__section-header">
+            <lightning-spinner if:true={isLoading} alternative-text="Fetching data" size="medium" variant="brand">
+            </lightning-spinner>
             <lightning-icon icon-name="standard:event" alternative-text="Event" title="Event"></lightning-icon>
             <p class="slds-var-m-left_x-small">This is the section header</p>
         </div>
-        <lightning-spinner if:true={isLoading} alternative-text="Fetching data" size="medium" variant="brand">
-        </lightning-spinner>
     </div>
 </template>

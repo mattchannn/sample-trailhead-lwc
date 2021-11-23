@@ -1,0 +1,5 @@
+.child__master-container {
+    height: 100px;
+    border: var(--lwc-borderWidthThin, 1px) solid var(--lwc-colorBorder, #dddbda);
+    border-radius: var(--lwc-borderRadiusMedium, 0.25rem);
+}

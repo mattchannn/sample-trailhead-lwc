@@ -1,5 +1,11 @@
 .child__master-container {
-    height: 100px;
+    height: auto;
     border: var(--lwc-borderWidthThin, 1px) solid var(--lwc-colorBorder, #dddbda);
     border-radius: var(--lwc-borderRadiusMedium, 0.25rem);
+    padding: var(--lwc-varSpacingMedium, 1rem);
+}
+
+.flex-wrapper {
+    display: flex;
+    align-items: center;
 }

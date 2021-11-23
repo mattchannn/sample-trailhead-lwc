@@ -1,5 +1,8 @@
 <template>
     <section class="child__master-container">
-        <p>I am a child container</p>
+        <div class="flex-wrapper">
+            <p>Child container > mode: bubble true, composed false</p>
+            <lightning-button label="Bubble up the event" onclick={handleClick}></lightning-button>
+        </div>
     </section>
 </template>

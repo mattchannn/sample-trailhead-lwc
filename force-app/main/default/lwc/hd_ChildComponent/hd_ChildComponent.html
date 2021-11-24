@@ -1,8 +1,13 @@
 <template>
-    <section class="child__master-container">
-        <div class="flex-wrapper">
-            <p>Child container > mode: bubble true, composed false</p>
-            <lightning-button label="Bubble up the event" class="slds-m-left_large" onclick={handleClick}></lightning-button>
-        </div>
-    </section>
+  <section class="child__master-container">
+    <p class="slds-var-m-right_medium">Message: {message}</p>
+    <div class="flex-wrapper">
+      <p>Child container > mode: bubble true, composed false</p>
+      <lightning-button
+        label="Bubble up the event"
+        class="slds-var-m-left_large"
+        onclick={handleClick}
+      ></lightning-button>
+    </div>
+  </section>
 </template>

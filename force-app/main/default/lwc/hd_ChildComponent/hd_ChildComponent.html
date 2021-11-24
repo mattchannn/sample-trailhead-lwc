@@ -1,7 +1,7 @@
 <template>
-  <section class="child__master-container">
-    <p class="slds-var-m-right_medium">Message: {message}</p>
-    <div class="flex-wrapper">
+  <section class="child__master-container" onclicker={sectionOnClickHandler}>
+    <p class="slds-var-m-right_medium">Event propagation seq: {message}</p>
+    <div class="flex-wrapper indicator-child" onclicker={divOnClickHandler}>
       <p>Child container > mode: bubble true, composed false</p>
       <lightning-button
         label="Bubble up the event"

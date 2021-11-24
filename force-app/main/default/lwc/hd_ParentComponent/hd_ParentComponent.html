@@ -1,8 +1,8 @@
 <template>
-  <section class="parent__master-container">
+  <section class="slds-var-m-left_medium parent__master-container" onclicker={sectionOnClickHandler}>
     <div onclicker={divOnClickHandler}>
-      <p class="slds-var-m-bottom_x-small">Message: {message}</p>
-      <c-hd_-child-component onclicker={childOnClickHandler}></c-hd_-child-component>
+      <p class="slds-var-m-bottom_x-small">Event propagation seq: {message}</p>
+      <c-hd_-child-component onclicker={shadowHostOnClickHandler}></c-hd_-child-component>
     </div>
   </section>
 </template>

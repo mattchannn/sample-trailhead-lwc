@@ -66,9 +66,12 @@ export default class hd_QuantityfChangeButtonGroup extends LightningElement {
     }
 
     onQuantityChange(event) {
-        if (!isNaN(event.target.value)) {
+        let returnQty = parseInt(event.target.value, 10);
+        if (!isNaN(returnQty) && returnQty >= 0) {
             // this.number = parseInt(event.target.value);
             this.number = Number(event.target.value);
+        } else {
+            this.template.querySelector('[data-id=qty]').value = this.number;
         }
     }
 }

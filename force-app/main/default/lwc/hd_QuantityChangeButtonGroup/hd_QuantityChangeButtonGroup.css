@@ -1,5 +1,6 @@
 .quantity__master-container {
-    width: fit-content;
+    /* width: fit-content; */
+    width: auto;
     align-items: center;
     border: var(--lwc-borderWidthThin, 1px) solid var(--lwc-colorBorder, #dddbda);
     border-radius: var(--lwc-borderRadiusMedium, 0.25rem);

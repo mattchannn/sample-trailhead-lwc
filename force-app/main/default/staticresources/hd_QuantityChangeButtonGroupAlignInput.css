@@ -3,5 +3,17 @@
     text-align: center;
     min-height: initial;
     line-height: var(--lwc-lineHeightReset);
-    border: var(--lwc-spacingNone) solid var(--sds-c-input-color-border, var(--lwc-colorBorderInput,rgb(221, 219, 218)));
+    /* border: var(--lwc-spacingNone) solid var(--sds-c-input-color-border, var(--lwc-colorBorderInput,rgb(221, 219, 218))) */
+    border: var(--lwc-borderWidthThin) solid transparent;
+}
+
+.quantity__input[c-hd_QuantityChangeButtonGroup_hd_QuantityChangeButtonGroup] .slds-input:focus,
+.quantity__input[c-hd_QuantityChangeButtonGroup_hd_QuantityChangeButtonGroup] .slds-input:active {
+    box-shadow: none;
+}
+
+.quantity__decrement-btn[c-hd_QuantityChangeButtonGroup_hd_QuantityChangeButtonGroup] .slds-icon_container,
+.quantity__increment-btn[c-hd_QuantityChangeButtonGroup_hd_QuantityChangeButtonGroup] .slds-icon_container
+ {
+    margin: var(--lwc-spacingNone) auto;
 }

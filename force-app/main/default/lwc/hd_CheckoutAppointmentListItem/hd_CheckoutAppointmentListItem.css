@@ -1,0 +1,28 @@
+.flyout__expandable-area {
+    margin-bottom: var(--lwc-varSpacingSmall, 0.75rem);
+    border: var(--lwc-borderWidthThin, 1px) solid var(--lwc-colorBorder, #dddbda);
+    border-radius: 0 0 var(--lwc-borderRadiusMedium, 0.25rem) var(--lwc-borderRadiusMedium, 0.25rem);
+}
+
+.flyout__expandable-header {
+    color: var(--lwc-colorTextDefault, #080707);
+    border-bottom: var(--lwc-borderWidthThin, 1px) solid var(--lwc-colorBorder, #dddbda);
+    background-color: var(--lwc-colorBackground, #f3f2f2);
+    font-family: Arial, 'Salesforce Sans', Helvetica, sans-serif;
+}
+
+.flyout__expandable-header button,
+.flyout__expandable-header button:focus .flyout__expandable-header button:hover {
+    color: inherit;
+    text-decoration: none;
+    line-height: normal;
+}
+
+.flyout__expandable-headerSubText {
+    color: #706E6B;
+}
+
+.appointment-list__master-container {
+    padding: var(--lwc-varSpacingSmall, 0.75rem);
+    padding-bottom: 0;
+}

@@ -120,35 +120,9 @@
     font-weight: var(--lwc-fontWeightBold, 700);
 }
 
-.main-content__expandable-master-container {
+.flyout__expandable-master-container {
     padding: var(--lwc-varSpacingSmall, 0.75rem);
     box-sizing: border-box;
 }
 
-.main-content__expandable-area {
-    margin-bottom: var(--lwc-varSpacingSmall, 0.75rem);
-    border: var(--lwc-borderWidthThin, 1px) solid var(--lwc-colorBorder, #dddbda);
-    border-radius: 0 0 var(--lwc-borderRadiusMedium, 0.25rem) var(--lwc-borderRadiusMedium, 0.25rem);
-}
 
-.main-content__expandable-header {
-    color: var(--lwc-colorTextDefault, #080707);
-    border-bottom: var(--lwc-borderWidthThin, 1px) solid var(--lwc-colorBorder, #dddbda);
-    background-color: var(--lwc-colorBackground, #f3f2f2);
-    font-family: Arial, 'Salesforce Sans', Helvetica, sans-serif;
-}
-
-.main-content__expandable-header button,
-.main-content__expandable-header button:focus .main-content__expandable-header button:hover {
-    color: inherit;
-    text-decoration: none;
-    line-height: normal;
-}
-
-.main-content__expandable-headerSubText {
-    color: var(--lwc-brandHeaderContrast, #5e5e5e);
-}
-
-.appointment-list-item {
-    padding: var(--lwc-varSpacingSmall, 0.75rem);
-}

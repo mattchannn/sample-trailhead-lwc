@@ -9,6 +9,24 @@ export default class hd_CheckoutAppointmentGroupFlyout extends LightningElement 
         Com_General_Button_Submit: 'Submit'
     };
 
+    // TODO: remove the below dummy data
+    appointmentItems = [
+        {
+            title: 'W0004',
+            content: 'Accordion details - A'
+        },
+        {
+            title: 'W0005',
+            content: 'Accordion details - B'
+        },
+        {
+            title: 'W0006',
+            content: 'Accordion details - C'
+        }
+    ];
+
+    showAppointmentDetail = false;
+
     get checkoutAppointmentGroupFlyoutClass() {
         var width = window.screen.width;
         if (width <= 768) {
@@ -18,7 +36,8 @@ export default class hd_CheckoutAppointmentGroupFlyout extends LightningElement 
         return 'slds-modal slds-fade-in-open';
     }
 
-    activeSections = ['A', 'B', 'C'];
-
-    closeCheckOutAppointmentGroupFlyout() {}
+    onExpandAppointmentDetailHandler() {
+        console.log('>> Clicking...');
+        this.showAppointmentDetail = true;
+    }
 }

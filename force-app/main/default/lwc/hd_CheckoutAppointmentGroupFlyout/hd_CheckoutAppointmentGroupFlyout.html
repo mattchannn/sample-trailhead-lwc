@@ -39,107 +39,14 @@
                 <p class="slds-modal__title slds-var-m-left_x-small flyout__title">Make Appointment</p>
             </header>
             <!-- Accordion from Salesforce Design Blueprint - Start -->
-            <div class="slds-modal__content main-content__expandable-master-container">
+            <div class="slds-modal__content flyout__expandable-master-container">
                 <ul class="slds-accordion">
-                    <li class="main-content__expandable-area">
-                        <section class="slds-accordion__section slds-is-open">
-                            <div class="slds-accordion__summary main-content__expandable-header">
-                                <h2 class="slds-accordion__summary-heading">
-                                    <button
-                                        class="slds-button slds-accordion__summary-action"
-                                        aria-controls="referenceId-45"
-                                        aria-expanded="true"
-                                        title="Accordion summary"
-                                    >
-                                        <svg
-                                            class="
-                                                slds-accordion__summary-action-icon
-                                                slds-button__icon slds-button__icon_left
-                                            "
-                                            aria-hidden="true"
-                                        >
-                                            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
-                                        </svg>
-                                        <p class="slds-accordion__summary-content main-content__expandable-headerText">
-                                            W0002
-                                        </p>
-                                        <p class="slds-var-m-left_xx-small main-content__expandable-headerSubText">
-                                            (7 Items)
-                                        </p>
-                                    </button>
-                                </h2>
-                            </div>
-                            <div class="slds-accordion__content appointment-list-item" id="referenceId-45">
-                                Accordion details - A
-                            </div>
-                        </section>
-                    </li>
-                    <li class="main-content__expandable-area">
-                        <section class="slds-accordion__section slds-is-open">
-                            <div class="slds-accordion__summary main-content__expandable-header">
-                                <h2 class="slds-accordion__summary-heading">
-                                    <button
-                                        class="slds-button slds-accordion__summary-action"
-                                        aria-controls="referenceId-46"
-                                        aria-expanded="true"
-                                        title="Accordion summary"
-                                    >
-                                        <svg
-                                            class="
-                                                slds-accordion__summary-action-icon
-                                                slds-button__icon slds-button__icon_left
-                                            "
-                                            aria-hidden="true"
-                                        >
-                                            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
-                                        </svg>
-                                        <p class="slds-accordion__summary-content main-content__expandable-headerText">
-                                            W0003
-                                        </p>
-                                        <p class="slds-var-m-left_xx-small main-content__expandable-headerSubText">
-                                            (5 Items)
-                                        </p>
-                                    </button>
-                                </h2>
-                            </div>
-                            <div class="slds-accordion__content appointment-list-item" id="referenceId-46">
-                                Accordion details - B
-                            </div>
-                        </section>
-                    </li>
-                    <li class="main-content__expandable-area">
-                        <section class="slds-accordion__section">
-                            <div class="slds-accordion__summary main-content__expandable-header">
-                                <h2 class="slds-accordion__summary-heading">
-                                    <button
-                                        class="slds-button slds-accordion__summary-action"
-                                        aria-controls="referenceId-47"
-                                        aria-expanded="false"
-                                        title="Accordion summary"
-                                    >
-                                        <svg
-                                            class="
-                                                slds-accordion__summary-action-icon
-                                                slds-button__icon slds-button__icon_left
-                                            "
-                                            aria-hidden="true"
-                                        >
-                                            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
-                                        </svg>
-                                        <p class="slds-accordion__summary-content main-content__expandable-headerText">
-                                            W0004
-                                        </p>
-                                        <p class="slds-var-m-left_xx-small main-content__expandable-headerSubText">
-                                            (5 Items)
-                                        </p>
-                                    </button>
-                                </h2>
-                            </div>
-                            <div hidden="" class="slds-accordion__content appointment-list-item" id="referenceId-47">
-                                Accordion details - C
-                            </div>
-                        </section>
-                    </li>
+                    <template for:each={appointmentItems} for:item="appointmentItem">
+                        <c-hd_-checkout-appointment-list-item
+                            key={appointmentItem.title}
+                            appointment-item={appointmentItem}
+                        ></c-hd_-checkout-appointment-list-item>
+                    </template>
                 </ul>
             </div>
             <!-- Accordion from Salesforce Design Blueprint - End -->

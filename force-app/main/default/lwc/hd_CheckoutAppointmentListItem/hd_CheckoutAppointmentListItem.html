@@ -1,0 +1,44 @@
+<!-- sldsValidatorIgnore -->
+<template>
+    <li key={appointmentItem.title} class="flyout__expandable-area">
+        <section class="slds-accordion__section slds-is-open">
+            <div class="slds-accordion__summary flyout__expandable-header">
+                <h2 class="slds-accordion__summary-heading">
+                    <button
+                        class="slds-button slds-accordion__summary-action"
+                        aria-controls={appointmentItem.title}
+                        aria-expanded="true"
+                        title="Accordion summary"
+                        onclick={onExpandAppointmentDetailHandler}
+                    >
+                        <lightning-icon
+                            if:false={showAppointmentDetail}
+                            icon-name="utility:chevronright"
+                            size="x-small"
+                        ></lightning-icon>
+                        <lightning-icon
+                            if:true={showAppointmentDetail}
+                            icon-name="utility:chevrondown"
+                            size="x-small"
+                        ></lightning-icon>
+                        <p
+                            class="
+                                slds-accordion__summary-content
+                                slds-var-m-left_x-small
+                                flyout__expandable-headerText
+                            "
+                        >
+                            {appointmentItem.title}
+                        </p>
+                        <p class="slds-var-m-left_xx-small flyout__expandable-headerSubText">(7 Items)</p>
+                    </button>
+                </h2>
+            </div>
+            <template if:true={showAppointmentDetail}>
+                <div class="slds-accordion__content appointment-list__master-container" id={appointmentItem.title}>
+                    <div class="appointment-list__item-container">{appointmentItem.content}</div>
+                </div>
+            </template>
+        </section>
+    </li>
+</template>

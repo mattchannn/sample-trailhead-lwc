@@ -1,5 +1,5 @@
 <template>
-    <div if:true={loading} class="spinnerContainer">
+    <div if:true={loading} class="spinner__master-container">
         <lightning-spinner alternative-text="Loading" size="medium" variant="brand" class="spinner">
         </lightning-spinner>
     </div>
@@ -12,7 +12,7 @@
         aria-modal="true"
         aria-describedby="modal-content-id-1"
     >
-        <div class="slds-modal__container">
+        <div class="slds-modal__container flyout__master-container">
             <header class="slds-modal__header flyout__header flex-wrapper align-center">
                 <button
                     class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
@@ -44,49 +44,12 @@
                     <template for:each={appointmentItems} for:item="appointmentItem">
                         <c-hd_-checkout-appointment-list-item
                             key={appointmentItem.title}
-                            appointment-item={appointmentItem}
+                            appointment-item={appointspinnermentItem}
                         ></c-hd_-checkout-appointment-list-item>
                     </template>
                 </ul>
             </div>
             <!-- Accordion from Salesforce Design Blueprint - End -->
-
-            <!-- Not going to use - Start -->
-            <div class="slds-modal__content slds-p-around_medium slds-var-p-top_large">
-                <div class="slds-grid slds-grid_vertical">
-                    <div class="slds-col slds-grid flex-wrapper titleDiv">Select Serial Number</div>
-                    <div class="slds-col slds-grid slds-wrap infoBorder">
-                        <div class="slds-col slds-size_2-of-12 titleBorder"></div>
-                        <div class="slds-col slds-size_5-of-12 titleBorder">Serial Number</div>
-                        <div class="slds-col slds-size_5-of-12 titleBorder">
-                            Return/Exchange
-                            <p class="itemFont">Select {countSelected} item(s)</p>
-                        </div>
-                        <!-- Add checkbox list-->
-                        <template for:each={orderItemDetails} for:item="item" for:index="index">
-                            <div key={item.id} class="slds-col slds-size_2-of-12 bottomBorder">
-                                {item.numberOfOrder}
-                            </div>
-                            <div key={item.id} class="slds-col slds-size_5-of-12 bottomBorder">{item.label}</div>
-                            <div key={item.id} class="slds-col slds-size_5-of-12 bottomBorder">
-                                <lightning-input
-                                    type="checkbox"
-                                    name="serialSelect"
-                                    onchange={onSerialSelect}
-                                    data-id="serialCheckbox"
-                                    checked={item.checked}
-                                    disabled={isViewMode}
-                                    value={item.label}
-                                >
-                                </lightning-input>
-                            </div>
-                            <div key={item.id} class="slds-col" if:true={item.disabled}>(Item is {item.status})</div>
-                        </template>
-                        <!-- loop checkbox -->
-                    </div>
-                </div>
-            </div>
-            <!-- Not going to use - End -->
             <footer class="slds-modal__footer">
                 <button
                     class="slds-button slds-button_neutral"

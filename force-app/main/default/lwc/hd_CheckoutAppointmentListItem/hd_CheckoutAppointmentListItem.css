@@ -19,10 +19,14 @@
 }
 
 .flyout__expandable-headerSubText {
-    color: #706E6B;
+    color: #706e6b;
 }
 
 .appointment-list__master-container {
     padding: var(--lwc-varSpacingSmall, 0.75rem);
     padding-bottom: 0;
+}
+
+.appointment-list__item-grid-header {
+    background-color: var(--lwc-colorBackground, #f3f2f2);
 }

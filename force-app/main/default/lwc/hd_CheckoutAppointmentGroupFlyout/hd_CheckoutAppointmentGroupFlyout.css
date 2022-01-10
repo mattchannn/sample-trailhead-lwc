@@ -1,9 +1,9 @@
-.slds-modal__container {
+.flyout__master-container {
     width: 65%;
-    max-width: unset;
+    max-width: initial;
 }
 
-.spinnerContainer {
+.spinner__master-container {
     position: fixed;
     top: 0;
     right: 0;
@@ -20,86 +20,6 @@
     left: 0;
     right: 0;
     background: rgba(255, 255, 255, 0.75);
-}
-
-.infoBorder {
-    border: 1px solid #dddbda;
-    box-sizing: border-box;
-    border-radius: 0px 0px 4px 4px;
-}
-
-.titleDiv {
-    /* Gird style */
-    border-top: 1px solid #dddbda;
-    border-left: 1px solid #dddbda;
-    border-right: 1px solid #dddbda;
-    box-sizing: border-box;
-    border-radius: 4px 4px 0px 0px;
-    padding-left: 12px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-
-    /* Font style */
-    font-family: Arial;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 12px;
-    line-height: 18px;
-    color: #080707;
-}
-
-.titleBorder {
-    /* Gird style */
-    background: #fafaf9;
-    border-bottom: 1px;
-    border-left: 1px;
-    border-right: 1px;
-    height: 32px;
-    box-shadow: 0px -1px 0px #dddbda, 0px 1px 0px #dddbda;
-    padding-left: 12px;
-    padding-top: 6px;
-    padding-bottom: 6px;
-
-    /* Font style */
-    font-family: Arial;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 12px;
-    line-height: 20px;
-    display: flex;
-    align-items: center;
-    color: #3e3e3c;
-}
-
-.bottomBorder {
-    /* Gird style */
-    height: 30px;
-    background: #ffffff;
-    box-shadow: 0px -1px 0px #dddbda, 0px 1px 0px #dddbda;
-    padding-left: 12px;
-    padding-top: 6px;
-    padding-bottom: 6px;
-
-    /* Font style */
-    font-family: Arial;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 12px;
-    line-height: 18px;
-    display: flex;
-    align-items: center;
-    color: #080707;
-}
-
-.itemFont {
-    font-family: Arial;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 10px;
-    display: flex;
-    align-items: center;
-    color: #b0adab;
-    padding-left: 5px;
 }
 
 /* custom */
@@ -124,5 +44,3 @@
     padding: var(--lwc-varSpacingSmall, 0.75rem);
     box-sizing: border-box;
 }
-
-

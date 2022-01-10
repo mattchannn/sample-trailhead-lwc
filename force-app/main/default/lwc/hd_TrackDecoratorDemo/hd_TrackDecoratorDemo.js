@@ -4,6 +4,7 @@ import { NavigationMixin } from 'lightning/navigation';
 export default class hd_TrackDecoratorDemo extends NavigationMixin(LightningElement) {
     @track fullName = { firstName: '', lastName: '' };
     isShowPrompt = false;
+    isDisplayCheckOutAppointmentGroupFlyout = false;
 
     renderedCallback() {
         console.log('>> hd_TrackDecoratorDemo: <renderedCallback()>: render now');
@@ -45,5 +46,9 @@ export default class hd_TrackDecoratorDemo extends NavigationMixin(LightningElem
         // this.fullName = {...this.fullName, firstName: "John", lastName: "Joe"}
 
         console.log('>> handleClick: fullName is ', JSON.stringify(this.fullName, null, 2));
+    }
+
+    openCheckOutAppointmentGroupFlyout() {
+        this.isDisplayCheckOutAppointmentGroupFlyout = true;
     }
 }

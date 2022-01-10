@@ -39,6 +39,18 @@
         <div class="trackdec__bubbling-section">
             <c-hd_-parent-component></c-hd_-parent-component>
         </div>
+        <!-- CheckoutAppointmentFlyout -->
+        <div class="trackdec__checkout-appointment-btn slds-var-m-top_medium">
+            <lightning-button
+                variant="brand"
+                label="Open Checkout Appointment Modal"
+                title="Open checkout appointment modal"
+                icon-name="action:check"
+                class="slds-var-m-left_medium"
+                onclick={openCheckOutAppointmentGroupFlyout}
+            >
+            </lightning-button>
+        </div>
     </lightning-card>
     <!-- Prompt -->
     <template if:true={isShowPrompt}>
@@ -48,5 +60,8 @@
             description-text="Are you sure you want to cancel the order?"
             onpromptbuttonclick={onPromptButtonClickHandler}
         ></c-hd_-prompt>
+    </template>
+    <template if:true={isDisplayCheckOutAppointmentGroupFlyout}>
+        <c-hd_-checkout-appointment-group-flyout></c-hd_-checkout-appointment-group-flyout>
     </template>
 </template>

@@ -1,0 +1,198 @@
+<template>
+    <div if:true={loading} class="spinnerContainer">
+        <lightning-spinner alternative-text="Loading" size="medium" variant="brand" class="spinner">
+        </lightning-spinner>
+    </div>
+    <!-- Modal from Salesforce Design Blueprint -->
+    <section
+        role="dialog"
+        tabindex="-1"
+        class={checkoutAppointmentGroupFlyoutClass}
+        aria-labelledby="appointment-flyout-heading"
+        aria-modal="true"
+        aria-describedby="modal-content-id-1"
+    >
+        <div class="slds-modal__container">
+            <header class="slds-modal__header flyout__header flex-wrapper align-center">
+                <button
+                    class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+                    title={customLabels.Com_General_Button_Close}
+                    onclick={closeCheckOutAppointmentGroupFlyout}
+                >
+                    <lightning-icon
+                        icon-name="utility:close"
+                        alternative-text={customLabels.Com_General_Button_Close}
+                        variant="inverse"
+                        size="small"
+                    >
+                    </lightning-icon>
+                    <span class="slds-assistive-text">{customLabels.Com_General_Button_Close}</span>
+                    <!-- For the use of SDLC validator -->
+                    <label class="slds-assistive-text">{customLabels.Com_General_Button_Close}</label>
+                </button>
+                <lightning-icon
+                    icon-name="standard:work_order"
+                    alternative-text="flyout-header-icon"
+                    variant="inverse"
+                    size="small"
+                ></lightning-icon>
+                <p class="slds-modal__title slds-var-m-left_x-small flyout__title">Make Appointment</p>
+            </header>
+            <!-- Accordion from Salesforce Design Blueprint - Start -->
+            <div class="slds-modal__content main-content__expandable-master-container">
+                <ul class="slds-accordion">
+                    <li class="main-content__expandable-area">
+                        <section class="slds-accordion__section slds-is-open">
+                            <div class="slds-accordion__summary main-content__expandable-header">
+                                <h2 class="slds-accordion__summary-heading">
+                                    <button
+                                        class="slds-button slds-accordion__summary-action"
+                                        aria-controls="referenceId-45"
+                                        aria-expanded="true"
+                                        title="Accordion summary"
+                                    >
+                                        <svg
+                                            class="
+                                                slds-accordion__summary-action-icon
+                                                slds-button__icon slds-button__icon_left
+                                            "
+                                            aria-hidden="true"
+                                        >
+                                            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+                                        </svg>
+                                        <p class="slds-accordion__summary-content main-content__expandable-headerText">
+                                            W0002
+                                        </p>
+                                        <p class="slds-var-m-left_xx-small main-content__expandable-headerSubText">
+                                            (7 Items)
+                                        </p>
+                                    </button>
+                                </h2>
+                            </div>
+                            <div class="slds-accordion__content appointment-list-item" id="referenceId-45">
+                                Accordion details - A
+                            </div>
+                        </section>
+                    </li>
+                    <li class="main-content__expandable-area">
+                        <section class="slds-accordion__section slds-is-open">
+                            <div class="slds-accordion__summary main-content__expandable-header">
+                                <h2 class="slds-accordion__summary-heading">
+                                    <button
+                                        class="slds-button slds-accordion__summary-action"
+                                        aria-controls="referenceId-46"
+                                        aria-expanded="true"
+                                        title="Accordion summary"
+                                    >
+                                        <svg
+                                            class="
+                                                slds-accordion__summary-action-icon
+                                                slds-button__icon slds-button__icon_left
+                                            "
+                                            aria-hidden="true"
+                                        >
+                                            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+                                        </svg>
+                                        <p class="slds-accordion__summary-content main-content__expandable-headerText">
+                                            W0003
+                                        </p>
+                                        <p class="slds-var-m-left_xx-small main-content__expandable-headerSubText">
+                                            (5 Items)
+                                        </p>
+                                    </button>
+                                </h2>
+                            </div>
+                            <div class="slds-accordion__content appointment-list-item" id="referenceId-46">
+                                Accordion details - B
+                            </div>
+                        </section>
+                    </li>
+                    <li class="main-content__expandable-area">
+                        <section class="slds-accordion__section">
+                            <div class="slds-accordion__summary main-content__expandable-header">
+                                <h2 class="slds-accordion__summary-heading">
+                                    <button
+                                        class="slds-button slds-accordion__summary-action"
+                                        aria-controls="referenceId-47"
+                                        aria-expanded="false"
+                                        title="Accordion summary"
+                                    >
+                                        <svg
+                                            class="
+                                                slds-accordion__summary-action-icon
+                                                slds-button__icon slds-button__icon_left
+                                            "
+                                            aria-hidden="true"
+                                        >
+                                            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+                                        </svg>
+                                        <p class="slds-accordion__summary-content main-content__expandable-headerText">
+                                            W0004
+                                        </p>
+                                        <p class="slds-var-m-left_xx-small main-content__expandable-headerSubText">
+                                            (5 Items)
+                                        </p>
+                                    </button>
+                                </h2>
+                            </div>
+                            <div hidden="" class="slds-accordion__content appointment-list-item" id="referenceId-47">
+                                Accordion details - C
+                            </div>
+                        </section>
+                    </li>
+                </ul>
+            </div>
+            <!-- Accordion from Salesforce Design Blueprint - End -->
+
+            <!-- Not going to use - Start -->
+            <div class="slds-modal__content slds-p-around_medium slds-var-p-top_large">
+                <div class="slds-grid slds-grid_vertical">
+                    <div class="slds-col slds-grid flex-wrapper titleDiv">Select Serial Number</div>
+                    <div class="slds-col slds-grid slds-wrap infoBorder">
+                        <div class="slds-col slds-size_2-of-12 titleBorder"></div>
+                        <div class="slds-col slds-size_5-of-12 titleBorder">Serial Number</div>
+                        <div class="slds-col slds-size_5-of-12 titleBorder">
+                            Return/Exchange
+                            <p class="itemFont">Select {countSelected} item(s)</p>
+                        </div>
+                        <!-- Add checkbox list-->
+                        <template for:each={orderItemDetails} for:item="item" for:index="index">
+                            <div key={item.id} class="slds-col slds-size_2-of-12 bottomBorder">
+                                {item.numberOfOrder}
+                            </div>
+                            <div key={item.id} class="slds-col slds-size_5-of-12 bottomBorder">{item.label}</div>
+                            <div key={item.id} class="slds-col slds-size_5-of-12 bottomBorder">
+                                <lightning-input
+                                    type="checkbox"
+                                    name="serialSelect"
+                                    onchange={onSerialSelect}
+                                    data-id="serialCheckbox"
+                                    checked={item.checked}
+                                    disabled={isViewMode}
+                                    value={item.label}
+                                >
+                                </lightning-input>
+                            </div>
+                            <div key={item.id} class="slds-col" if:true={item.disabled}>(Item is {item.status})</div>
+                        </template>
+                        <!-- loop checkbox -->
+                    </div>
+                </div>
+            </div>
+            <!-- Not going to use - End -->
+            <footer class="slds-modal__footer">
+                <button
+                    class="slds-button slds-button_neutral"
+                    onclick={closeCheckOutAppointmentGroupFlyout}
+                    title={customLabels.Com_General_Button_Cancel}
+                >
+                    {customLabels.Com_General_Button_Cancel}
+                </button>
+                <button onclick={confirmReturn} class="slds-button slds-button_brand">
+                    {customLabels.Com_General_Button_Submit}
+                </button>
+            </footer>
+        </div>
+    </section>
+    <div class="slds-backdrop slds-backdrop_open"></div>
+</template>

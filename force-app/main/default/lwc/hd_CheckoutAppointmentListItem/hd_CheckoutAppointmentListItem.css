@@ -27,6 +27,10 @@
     padding-bottom: 0;
 }
 
+.appointment-list__grid {
+    border: var(--lwc-borderWidthThin, 1px) solid var(--lwc-colorBorder, #dddbda);
+}
+
 .appointment-list__item-grid-header {
     background-color: var(--lwc-colorBackground, #f3f2f2);
 }

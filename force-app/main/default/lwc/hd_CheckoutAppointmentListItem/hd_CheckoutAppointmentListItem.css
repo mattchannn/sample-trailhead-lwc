@@ -23,8 +23,7 @@
 }
 
 .appointment-list__master-container {
-    padding: var(--lwc-varSpacingSmall, 0.75rem);
-    padding-bottom: 0;
+    padding-top: var(--lwc-varSpacingSmall, 0.75rem);
 }
 
 .appointment-list__grid {

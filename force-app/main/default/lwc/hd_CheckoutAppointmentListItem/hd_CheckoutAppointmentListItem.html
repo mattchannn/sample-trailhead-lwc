@@ -37,6 +37,12 @@
             <template if:true={showAppointmentDetail}>
                 <div class="slds-accordion__content appointment-list__master-container" id={appointmentItem.title}>
                     <div class="appointment-list__item-container">{appointmentItem.content}</div>
+                    <lightning-button
+                        label="Create Appointment"
+                        icon-name="utility:add"
+                        title="Tap here to create appointment"
+                        class="slds-p-vertical_xx-small slds-m-top_small"
+                    ></lightning-button>
                 </div>
             </template>
         </section>

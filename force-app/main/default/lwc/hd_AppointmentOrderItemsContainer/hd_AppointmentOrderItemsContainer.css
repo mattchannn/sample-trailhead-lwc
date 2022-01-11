@@ -1,3 +1,7 @@
+:host {
+    font-family: Arial, 'Salesforce Sans', Helvetica, sans-serif;
+}
+
 .flyout__expandable-area {
     margin-bottom: var(--lwc-varSpacingSmall, 0.75rem);
     border: var(--lwc-borderWidthThin, 1px) solid var(--lwc-colorBorder, #dddbda);
@@ -8,7 +12,6 @@
     color: var(--lwc-colorTextDefault, #080707);
     border-bottom: var(--lwc-borderWidthThin, 1px) solid var(--lwc-colorBorder, #dddbda);
     background-color: var(--lwc-colorBackground, #f3f2f2);
-    font-family: Arial, 'Salesforce Sans', Helvetica, sans-serif;
 }
 
 .flyout__expandable-header button,
@@ -38,6 +41,15 @@
 .appointment-list__item-grid-header.xxlabel {
     color: #3e3e3c;
     font-size: 13px;
-    font-family: Arial, 'Salesforce Sans', Helvetica, sans-serif;
     font-weight: bold;
+}
+
+.appointment-list__grid-content-container {
+    padding: var(--lwc-varSpacingXSmall, 0.5rem);
+    border-bottom: var(--lwc-borderWidthThin, 1px) solid var(--lwc-colorBorder, #dddbda);
+    align-items: center;
+}
+
+.appointment-list__grid-content-container:last-child {
+    border: none;
 }

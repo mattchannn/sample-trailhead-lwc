@@ -1,7 +1,7 @@
 <!-- sldsValidatorIgnore -->
 <template>
     <ul>
-        <li key={appointmentItem.key__appointmentItem.name} class="flyout__expandable-area">
+        <li key={appointmentItem.key} class="flyout__expandable-area">
             <section class="slds-accordion__section slds-is-open">
                 <div class="slds-accordion__summary flyout__expandable-header">
                     <h2 class="slds-accordion__summary-heading">
@@ -96,16 +96,22 @@
                                     <template for:each={appointmentItem.items} for:item="item" for:index="index">
                                         <div
                                             key={item.name__index}
-                                            class="slds-col slds-grid slds-wrap appointment-list__grid-conten-container"
+                                            class="
+                                                slds-col slds-grid slds-wrap
+                                                appointment-list__grid-content-container
+                                            "
                                         >
                                             <div class="slds-col slds-size_1-of-12">
-                                                <div class="slds-col slds-grid slds-wrap">
+                                                <div
+                                                    class="slds-col slds-grid slds-wrap slds-grid_vertical-align-center"
+                                                >
                                                     <lightning-input
                                                         type="checkbox"
                                                         label=""
                                                         name="toggle-all-appointment-list"
+                                                        class="slds-size_5-of-12"
                                                     ></lightning-input>
-                                                    <p>#{index}</p>
+                                                    <p class="slds-size_7-of-12">#{index}</p>
                                                 </div>
                                             </div>
                                             <div class="slds-col slds-size_3-of-12">{item.name}</div>
@@ -118,12 +124,14 @@
                                 </div>
                             </div>
                         </div>
-                        <lightning-button
-                            label="Create Appointment"
-                            icon-name="utility:add"
-                            title="Tap here to create appointment"
-                            class="slds-p-vertical_xx-small slds-m-top_small"
-                        ></lightning-button>
+                        <div class="slds-m-top_small">
+                            <lightning-button
+                                label="Create Appointment"
+                                icon-name="utility:add"
+                                title="Tap here to create appointment"
+                                class="slds-p-vertical_xx-small"
+                            ></lightning-button>
+                        </div>
                     </div>
                 </template>
             </section>

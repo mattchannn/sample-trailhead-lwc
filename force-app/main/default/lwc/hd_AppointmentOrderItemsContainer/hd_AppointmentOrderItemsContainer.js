@@ -1,6 +1,6 @@
 import { LightningElement, api } from 'lwc';
 
-export default class hd_CheckoutAppointmentListItem extends LightningElement {
+export default class hd_AppointmentOrderItemsContainer extends LightningElement {
     @api appointmentItem;
 
     connectedCallback() {

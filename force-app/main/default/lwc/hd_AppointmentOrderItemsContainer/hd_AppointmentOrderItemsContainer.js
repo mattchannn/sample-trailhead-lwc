@@ -14,4 +14,13 @@ export default class hd_AppointmentOrderItemsContainer extends LightningElement 
     onExpandAppointmentDetailHandler() {
         this.showAppointmentDetail = !this.showAppointmentDetail;
     }
+
+    onCheckAllOrderItemsHandler(event) {
+        let i;
+        let checkboxes = this.template.querySelectorAll('[data-id="order-list-checkbox"]');
+        for (i = 0; i < checkboxes.length; i++) {
+            checkboxes[i].checked = event.target.checked;
+            checkboxes[i].indeterminate = event.target.checked;
+        }
+    }
 }

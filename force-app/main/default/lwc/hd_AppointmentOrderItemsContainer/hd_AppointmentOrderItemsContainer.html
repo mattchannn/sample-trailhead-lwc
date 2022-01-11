@@ -1,13 +1,13 @@
 <!-- sldsValidatorIgnore -->
 <template>
     <ul>
-        <li key={appointmentItem.key} class="flyout__expandable-area">
+        <li key={orderItem.key} class="flyout__expandable-area">
             <section class="slds-accordion__section slds-is-open">
                 <div class="slds-accordion__summary flyout__expandable-header">
                     <h2 class="slds-accordion__summary-heading">
                         <button
                             class="slds-button slds-accordion__summary-action"
-                            aria-controls={appointmentItem.key}
+                            aria-controls={orderItem.key}
                             aria-expanded="true"
                             title="Accordion summary"
                             onclick={onExpandAppointmentDetailHandler}
@@ -29,14 +29,14 @@
                                     flyout__expandable-headerText
                                 "
                             >
-                                {appointmentItem.key}
+                                {orderItem.key}
                             </p>
                             <p class="slds-var-m-left_xx-small flyout__expandable-headerSubText">(7 Items)</p>
                         </button>
                     </h2>
                 </div>
                 <template if:true={showAppointmentDetail}>
-                    <div class="slds-accordion__content appointment-list__master-container" id={appointmentItem.key}>
+                    <div class="slds-accordion__content appointment-list__master-container" id={orderItem.key}>
                         <div class="appointment-list__item-container">
                             <div class="slds-grid slds-grid_vertical">
                                 <div class="appointment-list__grid-master-container">
@@ -94,7 +94,7 @@
                                     <!-- Header Cell - End -->
 
                                     <!-- Appointment List Item with checkboxes - Start -->
-                                    <template for:each={appointmentItem.items} for:item="item" for:index="index">
+                                    <template for:each={orderItem.items} for:item="item" for:index="index">
                                         <div
                                             key={item.name__index}
                                             class="

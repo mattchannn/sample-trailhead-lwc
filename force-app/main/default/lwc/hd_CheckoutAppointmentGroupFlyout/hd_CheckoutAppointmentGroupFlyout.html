@@ -46,10 +46,10 @@
             <!-- Accordion from Salesforce Design Blueprint - Start -->
             <div class="slds-modal__content flyout__expandable-master-container">
                 <ul class="slds-accordion">
-                    <template for:each={appointmentListItems} for:item="appointmentListItem" for:index="index">
+                    <template for:each={orderItems} for:item="orderItem" for:index="index">
                         <c-hd_-appointment-order-items-container
-                            key={appointmentListItem.key__index}
-                            appointment-item={appointmentListItem}
+                            key={orderItem.key__index}
+                            order-item={orderItem}
                         ></c-hd_-appointment-order-items-container>
                     </template>
                 </ul>

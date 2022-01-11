@@ -1,10 +1,10 @@
 import { LightningElement, api } from 'lwc';
 
 export default class hd_AppointmentOrderItemsContainer extends LightningElement {
-    @api appointmentItem;
+    @api orderItem;
 
     connectedCallback() {
-        console.log('>> AppointmentItem:', JSON.stringify(this.appointmentItem, null, 2));
+        console.log('>> Order Item:', JSON.stringify(this.orderItem, null, 2));
     }
 
     showAppointmentDetail = false;

@@ -42,7 +42,7 @@
                                 <div class="appointment-list__grid-master-container">
                                     <!-- Header Cell - Start -->
                                     <div class="slds-col slds-grid slds-wrap appointment-list__grid-header-container">
-                                        <div class="slds-col slds-size_2-of-12 appointment-list__item-grid-header">
+                                        <div class="slds-col slds-size_1-of-12 appointment-list__item-grid-header">
                                             <lightning-input
                                                 type="checkbox"
                                                 label=""
@@ -72,7 +72,7 @@
                                         <div
                                             class="
                                                 slds-col
-                                                slds-size_2-of-12
+                                                slds-size_3-of-12
                                                 appointment-list__item-grid-header
                                                 xxlabel
                                             "
@@ -98,10 +98,19 @@
                                             key={item.name__index}
                                             class="slds-col slds-grid slds-wrap appointment-list__grid-conten-container"
                                         >
-                                            <div class="slds-col slds-size_2-of-12">Checkbox</div>
+                                            <div class="slds-col slds-size_1-of-12">
+                                                <div class="slds-col slds-grid slds-wrap">
+                                                    <lightning-input
+                                                        type="checkbox"
+                                                        label=""
+                                                        name="toggle-all-appointment-list"
+                                                    ></lightning-input>
+                                                    <p>#{index}</p>
+                                                </div>
+                                            </div>
                                             <div class="slds-col slds-size_3-of-12">{item.name}</div>
                                             <div class="slds-col slds-size_2-of-12">{item.qty}</div>
-                                            <div class="slds-col slds-size_2-of-12">{item.appointmentId}</div>
+                                            <div class="slds-col slds-size_3-of-12">{item.appointmentId}</div>
                                             <div class="slds-col slds-size_3-of-12">{item.deliverDatetime}</div>
                                         </div>
                                     </template>

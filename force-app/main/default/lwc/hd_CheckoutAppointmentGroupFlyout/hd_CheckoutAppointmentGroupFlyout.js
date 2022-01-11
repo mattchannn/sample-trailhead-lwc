@@ -27,12 +27,10 @@ export default class hd_CheckoutAppointmentGroupFlyout extends LightningElement 
             ]
         },
         {
-            key: 'W0005',
-            content: 'Accordion details - B'
+            key: 'W0005'
         },
         {
-            key: 'W0006',
-            content: 'Accordion details - C'
+            key: 'W0006'
         }
     ];
 

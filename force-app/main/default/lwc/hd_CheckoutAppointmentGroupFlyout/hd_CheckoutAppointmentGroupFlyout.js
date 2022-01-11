@@ -10,17 +10,28 @@ export default class hd_CheckoutAppointmentGroupFlyout extends LightningElement 
     };
 
     // TODO: remove the below dummy data
-    appointmentItems = [
+    appointmentListItems = [
         {
-            title: 'W0004',
-            content: 'Accordion details - A'
+            key: 'W0004',
+            items: [
+                {
+                    name: 'Samsung Tablet',
+                    qty: 1,
+                    appointmentId: '000123'
+                },
+                {
+                    name: 'Samsung Smart TV',
+                    qty: 3,
+                    appointmentId: '000124'
+                }
+            ]
         },
         {
-            title: 'W0005',
+            key: 'W0005',
             content: 'Accordion details - B'
         },
         {
-            title: 'W0006',
+            key: 'W0006',
             content: 'Accordion details - C'
         }
     ];

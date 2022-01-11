@@ -1,6 +1,11 @@
 <template>
     <div if:true={loading} class="spinner__master-container">
-        <lightning-spinner alternative-text="Loading" size="medium" variant="brand" class="spinner">
+        <lightning-spinner
+            alternative-text="Checkout Appointment Flyout Loading Spinner"
+            size="medium"
+            variant="brand"
+            class="spinner"
+        >
         </lightning-spinner>
     </div>
     <!-- Modal from Salesforce Design Blueprint -->
@@ -8,9 +13,9 @@
         role="dialog"
         tabindex="-1"
         class={checkoutAppointmentGroupFlyoutClass}
-        aria-labelledby="appointment-flyout-heading"
+        aria-labelledby="appointment-flyout-header"
         aria-modal="true"
-        aria-describedby="modal-content-id-1"
+        aria-describedby="modal-content-checkout-appointment"
     >
         <div class="slds-modal__container flyout__master-container">
             <header class="slds-modal__header flyout__header flex-wrapper align-center">
@@ -41,10 +46,10 @@
             <!-- Accordion from Salesforce Design Blueprint - Start -->
             <div class="slds-modal__content flyout__expandable-master-container">
                 <ul class="slds-accordion">
-                    <template for:each={appointmentItems} for:item="appointmentItem">
+                    <template for:each={appointmentListItems} for:item="appointmentListItem" for:index="index">
                         <c-hd_-checkout-appointment-list-item
-                            key={appointmentItem.title}
-                            appointment-item={appointmentItem}
+                            key={appointmentListItem.key__index}
+                            appointment-item={appointmentListItem}
                         ></c-hd_-checkout-appointment-list-item>
                     </template>
                 </ul>
@@ -58,7 +63,7 @@
                 >
                     {customLabels.Com_General_Button_Cancel}
                 </button>
-                <button onclick={confirmReturn} class="slds-button slds-button_brand">
+                <button onclick={later} class="slds-button slds-button_brand">
                     {customLabels.Com_General_Button_Submit}
                 </button>
             </footer>

@@ -10,7 +10,7 @@ export default class hd_CheckoutAppointmentGroupFlyout extends LightningElement 
     };
 
     // TODO: remove the below dummy data
-    appointmentListItems = [
+    orderItems = [
         {
             key: 'W0004',
             items: [
@@ -46,7 +46,6 @@ export default class hd_CheckoutAppointmentGroupFlyout extends LightningElement 
     }
 
     onExpandAppointmentDetailHandler() {
-        console.log('>> Clicking...');
         this.showAppointmentDetail = true;
     }
 }

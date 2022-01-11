@@ -7,12 +7,12 @@ export default class hd_AppointmentOrderItemsContainer extends LightningElement 
         console.log('>> Order Item:', JSON.stringify(this.orderItem, null, 2));
     }
 
-    showAppointmentDetail = false;
+    showAppointmentOrderItems = false;
 
-    chevronIcon = this.showAppointmentDetail ? 'utility:chevrondown' : 'utility:chevronright';
+    chevronIcon = this.showAppointmentOrderItems ? 'utility:chevrondown' : 'utility:chevronright';
 
     onExpandAppointmentDetailHandler() {
-        this.showAppointmentDetail = !this.showAppointmentDetail;
+        this.showAppointmentOrderItems = !this.showAppointmentOrderItems;
     }
 
     onCheckAllOrderItemsHandler(event) {

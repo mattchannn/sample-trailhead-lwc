@@ -25,31 +25,31 @@
     color: #706e6b;
 }
 
-.appointment-list__master-container {
+.appointment-order-items__master-container {
     padding-top: var(--lwc-varSpacingSmall, 0.75rem);
 }
 
-.appointment-list__grid-master-container {
+.appointment-order-items__grid-master-container {
     border: var(--lwc-borderWidthThin, 1px) solid var(--lwc-colorBorder, #dddbda);
 }
 
-.appointment-list__grid-header-container {
+.appointment-order-items__grid-header-container {
     background-color: var(--lwc-colorBackground, #f3f2f2);
     padding: var(--lwc-varSpacingXSmall, 0.5rem);
 }
 
-.appointment-list__item-grid-header.xxlabel {
+.appointment-order-items__item-grid-header.xxlabel {
     color: #3e3e3c;
     font-size: 13px;
     font-weight: bold;
 }
 
-.appointment-list__grid-content-container {
+.appointment-order-items__grid-content-container {
     padding: var(--lwc-varSpacingXSmall, 0.5rem);
     border-bottom: var(--lwc-borderWidthThin, 1px) solid var(--lwc-colorBorder, #dddbda);
     align-items: center;
 }
 
-.appointment-list__grid-content-container:last-child {
+.appointment-order-items__grid-content-container:last-child {
     border: none;
 }

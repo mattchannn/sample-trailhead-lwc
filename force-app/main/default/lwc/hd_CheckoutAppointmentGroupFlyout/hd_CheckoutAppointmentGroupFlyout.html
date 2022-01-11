@@ -47,10 +47,10 @@
             <div class="slds-modal__content flyout__expandable-master-container">
                 <ul class="slds-accordion">
                     <template for:each={appointmentListItems} for:item="appointmentListItem" for:index="index">
-                        <c-hd_-checkout-appointment-list-item
+                        <c-hd_-appointment-order-items-container
                             key={appointmentListItem.key__index}
                             appointment-item={appointmentListItem}
-                        ></c-hd_-checkout-appointment-list-item>
+                        ></c-hd_-appointment-order-items-container>
                     </template>
                 </ul>
             </div>

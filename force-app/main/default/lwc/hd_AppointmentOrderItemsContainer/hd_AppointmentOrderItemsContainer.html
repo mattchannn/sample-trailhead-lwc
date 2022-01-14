@@ -41,8 +41,15 @@
                             <div class="slds-grid slds-grid_vertical">
                                 <div class="appointment-order-items__grid-master-container">
                                     <!-- Header Cell - Start -->
-                                    <div class="slds-col slds-grid slds-wrap appointment-order-items__grid-header-container">
-                                        <div class="slds-col slds-size_1-of-12 appointment-order-items__item-grid-header">
+                                    <div
+                                        class="
+                                            slds-col slds-grid slds-wrap
+                                            appointment-order-items__grid-header-container
+                                        "
+                                    >
+                                        <div
+                                            class="slds-col slds-size_1-of-12 appointment-order-items__item-grid-header"
+                                        >
                                             <lightning-input
                                                 type="checkbox"
                                                 name="check-all-order-items"
@@ -123,6 +130,10 @@
                                         </div>
                                     </template>
                                     <!-- Appointment List Item with checkboxes - End -->
+
+                                    <!-- Lightning Table Blueprint - Start -->
+                                    <c-hd_-appointment-order-items></c-hd_-appointment-order-items>
+                                    <!-- Lightning Table Blueprint - End -->
                                 </div>
                             </div>
                         </div>

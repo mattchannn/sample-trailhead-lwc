@@ -1,3 +1,7 @@
 :host {
     font-family: Arial, 'Salesforce Sans', Helvetica, sans-serif;
 }
+
+.slds-table thead th {
+    background-color: #f3f2f2;
+}

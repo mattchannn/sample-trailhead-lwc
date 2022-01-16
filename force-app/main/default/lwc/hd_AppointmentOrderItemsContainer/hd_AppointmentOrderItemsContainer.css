@@ -31,6 +31,7 @@
 
 .appointment-order-items__grid-master-container {
     border: var(--lwc-borderWidthThin, 1px) solid var(--lwc-colorBorder, #dddbda);
+    margin-top: 12px;
 }
 
 .appointment-order-items__grid-header-container {

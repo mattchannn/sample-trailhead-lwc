@@ -32,91 +32,19 @@
                     </h2>
                 </div>
                 <template if:true={showAppointmentOrderItems}>
-                    <div class="slds-accordion__content appointment-order-items__master-container" id={orderItem.key}>
-                        <div class="appointment-order-items__item-container">
-                            <div class="slds-grid slds-grid_vertical">
-                                <div class="appointment-order-items__grid-master-container">
-                                    <div if:true={later}>
-                                        <!-- Header Cell - Start -->
-                                        <div
-                                            class="slds-col slds-grid slds-wrap appointment-order-items__grid-header-container"
-                                        >
-                                            <div
-                                                class="slds-col slds-size_1-of-12 appointment-order-items__item-grid-header"
-                                            >
-                                                <lightning-input
-                                                    type="checkbox"
-                                                    name="check-all-order-items"
-                                                    variant="label-hidden"
-                                                    onchange={onCheckAllOrderItemsHandler}
-                                                ></lightning-input>
-                                            </div>
-                                            <div
-                                                class="slds-col slds-size_3-of-12 appointment-order-items__item-grid-header xxlabel"
-                                            >
-                                                Items
-                                            </div>
-                                            <div
-                                                class="slds-col slds-size_2-of-12 appointment-order-items__item-grid-header xxlabel"
-                                            >
-                                                Qty
-                                            </div>
-                                            <div
-                                                class="slds-col slds-size_3-of-12 appointment-order-items__item-grid-header xxlabel"
-                                            >
-                                                Appointment ID
-                                            </div>
-                                            <div
-                                                class="slds-col slds-size_3-of-12 appointment-order-items__item-grid-header xxlabel"
-                                            >
-                                                Delivery Date &amp; Time
-                                            </div>
-                                        </div>
-                                        <!-- Header Cell - End -->
+                    <div class="appointment-order-items__grid-master-container">
+                        <!-- Lightning Table Blueprint - Start -->
+                        <c-hd_-appointment-order-items></c-hd_-appointment-order-items>
+                        <!-- Lightning Table Blueprint - End -->
+                    </div>
 
-                                        <!-- Appointment List Item with checkboxes - Start -->
-                                        <template for:each={orderItem.items} for:item="item" for:index="index">
-                                            <div
-                                                key={item.name__index}
-                                                class="slds-col slds-grid slds-wrap appointment-order-items__grid-content-container"
-                                            >
-                                                <div class="slds-col slds-size_1-of-12">
-                                                    <div
-                                                        class="slds-col slds-grid slds-wrap slds-grid_vertical-align-center"
-                                                    >
-                                                        <lightning-input
-                                                            type="checkbox"
-                                                            name="check-single-order-items"
-                                                            data-id="order-list-checkbox"
-                                                            class="slds-size_5-of-12"
-                                                            variant="label-hidden"
-                                                        ></lightning-input>
-                                                        <p class="slds-size_7-of-12">#{index}</p>
-                                                    </div>
-                                                </div>
-                                                <div class="slds-col slds-size_3-of-12">{item.name}</div>
-                                                <div class="slds-col slds-size_2-of-12">{item.qty}</div>
-                                                <div class="slds-col slds-size_3-of-12">{item.appointmentId}</div>
-                                                <div class="slds-col slds-size_3-of-12">{item.deliverDatetime}</div>
-                                            </div>
-                                        </template>
-                                        <!-- Appointment List Item with checkboxes - End -->
-                                    </div>
-
-                                    <!-- Lightning Table Blueprint - Start -->
-                                    <c-hd_-appointment-order-items></c-hd_-appointment-order-items>
-                                    <!-- Lightning Table Blueprint - End -->
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slds-m-top_small">
-                            <lightning-button
-                                label="Create Appointment"
-                                icon-name="utility:add"
-                                title="Tap here to create appointment"
-                                class="slds-p-vertical_xx-small"
-                            ></lightning-button>
-                        </div>
+                    <div class="slds-m-top_small">
+                        <lightning-button
+                            label="Create Appointment"
+                            icon-name="utility:add"
+                            title="Tap here to create appointment"
+                            class="slds-p-vertical_xx-small"
+                        ></lightning-button>
                     </div>
                 </template>
             </section>

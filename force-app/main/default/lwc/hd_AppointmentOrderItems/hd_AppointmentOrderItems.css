@@ -3,5 +3,28 @@
 }
 
 .slds-table thead th {
-    background-color: #f3f2f2;
+    background-color: var(--lwc-colorBackground, #f3f2f2);
+}
+
+/* disable the hover state of resize handler */
+.slds-resizable__handle {
+    will-change: transform;
+}
+
+.orderItem__master-container-x {
+    padding: 0;
+    max-height: 140px;
+}
+
+.orderItem__master-container-y {
+    background-color: #ffffff;
+}
+
+.orderItem__table {
+    border: 0;
+}
+
+/* remove the excessive height of resize handler */
+.slds-resizable__divider:after {
+    height: 100%;
 }

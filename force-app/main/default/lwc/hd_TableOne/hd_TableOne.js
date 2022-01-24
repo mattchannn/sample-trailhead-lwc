@@ -1,4 +1,4 @@
-import { LightningElement, track } from 'lwc';
+import { LightningElement } from 'lwc';
 
 export default class hd_TableOne extends LightningElement {
     fixedWidth = 'width:15rem;';
@@ -56,7 +56,8 @@ export default class hd_TableOne extends LightningElement {
                 this._initWidths.push(th.style.width);
             });
         }
-
+        console.log('>> handleMouseDown', JSON.parse(JSON.stringify(this._initWidths)));
+        console.log('>> e.target', e.target);
         this._tableThColumn = e.target.parentElement;
         this._tableThInnerDiv = e.target.parentElement;
         while (this._tableThColumn.tagName !== 'TH') {
@@ -65,13 +66,13 @@ export default class hd_TableOne extends LightningElement {
         while (!this._tableThInnerDiv.className.includes('slds-cell-fixed')) {
             this._tableThInnerDiv = this._tableThInnerDiv.parentNode;
         }
-        console.log('handlemousedown this._tableThColumn.tagName => ', this._tableThColumn.tagName);
+        console.log('handlemousedown this._tableThColumn.tagName => ', JSON.stringify(this._tableThColumn.tagName));
         this._pageX = e.pageX;
-
+        console.log('handlemousedown this._pageX:', JSON.stringify(e.pageX));
         this._padding = this.paddingDiff(this._tableThColumn);
-
+        console.log('handlemousedown this._padding:', JSON.stringify(this._padding));
         this._tableThWidth = this._tableThColumn.offsetWidth - this._padding;
-        console.log('handlemousedown this._tableThColumn.tagName => ', this._tableThColumn.tagName);
+        console.log('handlemousedown this._tableThColumn: %o, this._tableThWidth %o', JSON.stringify(this._tableThColumn.offsetWidth), JSON.stringify(this._tableThWidth));
     }
 
     handlemousemove(e) {
